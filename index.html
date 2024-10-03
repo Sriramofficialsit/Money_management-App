@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>APP</title>
+    <link rel="stylesheet" href="./output.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-800">
+    <div class="border border-black rounded-lg shadow-lg shadow-black/40">
+        <div class="flex items-center justify-center gap-3 sm:gap-5 py-5">
+            <div class="rounded-lg bg-green-500 px-2 sm:px-5 py-2 text-center font-bold text-white shadow-lg shadow-black">
+                <div><h1 class="text-xl lg:text-2xl">Income</h1></div>
+                <div id="income-total">$500</div>
+            </div>
+            <div class="rounded-lg bg-red-500 px-2 sm:px-5 py-2 text-center font-bold text-white shadow-lg shadow-black">
+                <div><h1 class="text-xl lg:text-2xl">Expense</h1></div>
+                <div id="expense-total">$500</div>
+            </div>
+            <div class="rounded-lg bg-blue-500 px-2 sm:px-5 py-2 text-center font-bold text-white shadow-lg shadow-black">
+                <div><h1 class="text-xl lg:text-2xl">Balance</h1></div>
+                <div id="balance-total">$500</div>
+            </div>
+        </div>
+
+        <div class="block md:flex items-center justify-center gap-3 bg-gray-300 py-5 rounded-lg shadow shadow-black">
+            <div class="flex items-center justify-center gap-4">
+                <label for="des" class="font-bold">Description</label>
+                <input id="des" type="text" class="rounded border shadow shadow-black my-2  focus:outline-blue-800 px-2 py-1 sm:py-2" autocomplete="off"/>
+            </div>
+            <div class="flex items-center justify-center gap-2">
+                <label for="amt" class="mr-7 lg:mr-1 font-bold">Amount</label>
+                <input id="amt" type="number" class="rounded border shadow shadow-black my-2  focus:outline-blue-800 px-2 py-1 sm:py-2" autocomplete="off"/>
+            </div>
+            <div class="flex items-center justify-center gap-2 mt-4 md:mt-2">
+                <input type="radio" id="inc" name="option" value="Income" class="w-6 h-6 text-blue-600 "/>
+                <label for="inc" class="font-bold items-center">Income</label>
+                <input type="radio" id="exp" name="option" value="Expense"class="w-6 h-6 text-blue-600 "/>
+                <label for="exp" class="font-bold items-center">Expense</label>
+            </div>
+            <div class="flex items-center justify-center gap-2 mt-4 lg:mt-0">
+                <button class="rounded-xl bg-black px-5 py-2 text-white active:outline active:outline-white" onclick="getValue()">Add</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="flex h-screen flex-col gap-10 py-5">
+        <div>
+            <nav class="flex justify-center gap-3 text-white">
+                <div id="filter-all" class="rounded-lg bg-black px-4 py-2 shadow-lg shadow-black/40 cursor-pointer active:outline active:outline-white">All</div>
+                <div id="filter-income" class="rounded-lg bg-black px-4 py-2 shadow-lg shadow-black/40 cursor-pointer active:outline active:outline-white">Income</div>
+                <div id="filter-expense" class="rounded-lg bg-black px-4 py-2 shadow-lg shadow-black/40 cursor-pointer active:outline active:outline-white">Expense</div>
+            </nav>
+        </div>
+        <div>
+            <div>
+                <div class="grid grid-cols-2 lg:grid-cols-4 items-center gap-5 px-5" id="data-container">
+                  
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>
