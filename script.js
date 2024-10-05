@@ -120,7 +120,7 @@ function displayData(data) {
         const div_1 = document.createElement("div");
         div_1.className = "flex flex-col gap-5 bg-white p-5 rounded-lg shadow-lg shadow-black";
         data_container.append(div_1);
-
+        
         const div_1_child_1 = document.createElement("div");
         div_1_child_1.className = "flex flex-col items-center justify-center gap-2";
         div_1.append(div_1_child_1);
